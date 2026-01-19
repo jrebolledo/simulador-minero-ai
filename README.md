@@ -1,0 +1,1 @@
+# Simulador Minero con IA
