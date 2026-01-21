@@ -3,11 +3,9 @@ from fastapi import FastAPI, Query
 
 app = FastAPI()
 
+
 @app.get("/calculo")
-async def calculo(toneladas: float = Query(..., description="Toneladas"), 
+async def calculo(toneladas: float = Query(..., description="Toneladas"),
                    ley: float = Query(..., description="Ley")):
-    """
-    Calcula el resultado basado en toneladas y ley.
-    """
     resultado = toneladas * ley * 50
     return {"resultado": resultado}
